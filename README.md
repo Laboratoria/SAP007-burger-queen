@@ -6,10 +6,9 @@
 * [2. Resumo do projeto](#2-resumo-do-projeto)
 * [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
 * [4. Considerações gerais](#4-considerações-gerais)
-* [5. Critérios de aceitação mínima do
-  projeto](#5-critérios-de-aceitação-mínima-do-projeto)
-* [6. Guias, dicas e leituras
-  complementares](#7-guias-dicas-e-leituras-complementares)
+* [5. Critérios de aceitação mínimos do projeto](#5-critérios-mínimos-de-aceitação-do-projeto)
+* [6. Hacker Edition](#6-hacker-edition)
+* [7. Pistas, tips e leituras complementares](#7-pistas-tips-e-leituras-complementares)
 
 ***
 
@@ -486,7 +485,7 @@ Web App, Accessibility e Best Practices do [Lighthouse](https://developers.googl
 
 ***
 
-## 7. Guias, dicas e leituras complementares
+## 7. Pistas, tips e leituras complementares
 ### Primeiros passos
 1. Faça um _fork_ deste repositório (no GitHub).
 
