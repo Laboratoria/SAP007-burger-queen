@@ -38,16 +38,16 @@ você for trabalhar.
 
 ## 2. Resumo do projeto
 
-Desta vez temos um projeto 100% por demanda. Você sempre pode (e deve) fazer
-sugestões de melhora e mudança, mas muitas vezes trabalhará em um projeto em que
-primeiro deve se assegurar de cumprir os requisitos.
-
 Um pequeno restaurante de hambúrgueres, que está crescendo, necessita uma
 interface em que se possa realizar pedidos utilizando um _tablet_, e enviá-los
 para a cozinha para que sejam preparados de forma ordenada e eficiente (através
 de um _backend_ que os detalhes serão dados mais adiante).
 
 ![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
+
+Desta vez temos um projeto 100% por demanda. Você sempre pode (e deve) fazer
+sugestões de melhora e mudança, mas muitas vezes trabalhará em um projeto em que
+primeiro deve se assegurar de cumprir os requisitos.
 
 Estas são as informações que temos do cliente:
 
@@ -102,13 +102,6 @@ Portanto, esta experiência espera familiarizá-la com o conceito de _estado da
 tela_, e como cada mudança no estado vai refletir na interface (por exemplo,
 toda vez que adicionamos um _produto_ para um _pedido_, a interface deve
 atualizar a lista de pedidos e o total).
-
-Como objetivo **SECUNDÁRIO**, você deve seguir as recomendações para PWAs
-(_Progressive Web Apps_), que inclui conceitos como **offline**. Para
-orientá-las sobre este tema,recomendamos que você use
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/?hl=es), que
-é uma ferramenta do Google que nos ajuda a garantir que nossos aplicativos
-web sigam "boas práticas". Usaremos o Lighthouse ao avaliar o projeto.
 
 Finalmente, a interface deve estar desenhada especificamente para funcionar
 em **tablets**
@@ -316,24 +309,6 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
   * [Receber atualizações em tempo real com o Cloud Firestore - Documentação oficial](https://firebase.google.com/docs/firestore/query-data/listen?hl=pt-BR)
 </p></details>
 
-### angular
-
-- [ ] **components-and-templates**
-
-- [ ] **structural-directives**
-
-- [ ] **input-output**
-
-- [ ] **services**
-
-- [ ] **routing**
-
-- [ ] **observables**
-
-- [ ] **http-client**
-
-- [ ] **styles**
-
 ### react
 
 - [ ] **jsx**
@@ -354,27 +329,6 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 
 - [ ] **routing**
 
-### vue
-
-- [ ] **instance**
-
-- [ ] **data-and-methods**
-
-- [ ] **components**
-
-- [ ] **props**
-
-- [ ] **directives**
-
-- [ ] **iteration**
-
-- [ ] **events**
-
-- [ ] **computed-props-and-observers**
-
-- [ ] **routing**
-
-- [ ] **classes-and-styles**
 
 ## 4. Considerações gerais
 
@@ -384,19 +338,16 @@ Trabalhe integralmente uma história de usuário antes de passar para a próxima
 Cumpra todas as histórias possíveis dentro do tempo especificado.
 
 A lógica do projeto deve ser totalmente implementada em JavaScript (ES6 +), HTML
-e CSS e empacotada de forma automatizada. Neste projeto você deve usar
-[React](https://reactjs.org/), [Vue](https://vuejs.org/) ou
-[Angular](https://angular.io/)).
+e CSS e empacotada de forma automatizada. 
+
+Neste projeto você deve usar [React](https://reactjs.org/).
 
 O aplicativo deve ser um _Single Page App_. Os pedidos serão enviados por meio
 de um _tablet_, mas **não queremos um aplicativo nativo**, mas sim um aplicativo
-Web que seja **responsivo** e possa funcionar **offline**.
+Web que seja **mobile-first**.
 
 Precisamos pensar bem sobre o UX para aqueles que vão receber os pedidos, o
 tamanho e a aparência dos botões, a visibilidade do estado atual do pedido, etc.
-
-A aplicação deve seguir 80% ou mais das pontuações de Performance, Progressive
-Web App, Accessibility e Best Practices do Lighthouse.
 
 O aplicativo deve fazer uso de `npm-scripts` e ter scripts `start`, `test`,
 `build` e `deploy`, que são responsáveis por inicializar, rodar os testes,
@@ -407,16 +358,13 @@ _lines_ e _branches_.
 
 Este projeto inclui um _boilerplate_ com o código necessário para começar. A
 parte de back-end já foi resolvida. O _boilerplate_ inclui os seguintes
-arquivos/pastas com configurações do Firebase(hosting, firestore e functions):
+arquivos/pastas com configurações do Firebase(hosting e firestore):
 
 ```text
 ./04-burger-queen/
 ├── firebase.json
 ├── firestore.indexes.json
 ├── firestore.rules
-├── functions
-│   ├── index.js
-│   ├── package.json
 └── README.md
 ```
 
@@ -505,95 +453,83 @@ rapidamente aos clientes.
 * Os dados devem ser mantidos intactos, mesmo depois que um pedido for
   finalizado. Tudo isso para poder ter estatísticas no futuro.
 
+#### [História de usuário 4] Garçom/Garçonete deve poder entrar no sistema
+
+Eu, como garçom/garçonete quero entrar no sistema de pedidos.
+
+##### Critérios de aceitação
+
+O que deve acontecer para satisfazer as necessidades do usuário?
+
+* Acessar uma tela de login.
+* Inserir email e senha.
+* Receber mensagens de erros compreensíveis, conforme o erro e as informações inseridas.
+* Entrar no sistema de pedidos caso as credenciais forem corretas.
+
+##### Definição de pronto
+
+O acordado abaixo deve acontecer para dizer que a história está terminada:
+
+* Você deve ter recebido _code review_ de pelo menos uma parceira.
+* Fez _testes_ unitários e, além disso, testou seu produto manualmente.
+* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
+* Você deu deploy de seu aplicativo e marcou sua versão (tag git).
+
 ***
 
-## 6. Guias, dicas e leituras complementares
+## 6. Hacker Edition
 
-### Primeros passos
+As seções chamadas Hacker Edition são opcionais. Se você terminou tudo e ainda sobrou tempo, faça essa parte. Assim você poderá aprofundar e exercitar mais sobre os objetivos de aprendizagem do projeto.
 
-1. O primeiro passo deste projeto deve ser converter o menu descrito pelo
-   cliente em uma estrutura JSON para mais tarde _printar_ na tela.
+A aplicação deve funcionar **offline** e deve seguir 80% ou mais das pontuações de Performance, Progressive
+Web App, Accessibility e Best Practices do [Lighthouse](https://developers.google.com/web/tools/lighthouse/). 
 
-2. Faça um _fork_ deste repositório (no GitHub).
+***
 
-3. Clone seu _fork_ no seu computador:
+## 7. Guias, dicas e leituras complementares
+### Primeiros passos
+1. Faça um _fork_ deste repositório (no GitHub).
+
+2. Clone seu _fork_ no seu computador:
 
    ```sh
    git clone git@github.com:<tu-usuario-de-github>/<cohortid>-burger-queen.git
    cd <cohortid>-burger-queen
    ```
 
-4. Crie uma branch da `main` para começar a trabalhar. Por exemplo:
+3. Crie uma branch a partir da `main` para começar a trabalhar. Por exemplo:
 
    ```sh
    git checkout -b develop
    ```
 
-5. Crie um projeto no [Firebase](https://firebase.google.com/)
+4. Crie um projeto no [Firebase](https://firebase.google.com/)
 
-6. Habilite o Firestore (_começar em modo bloqueado_) nas "Bases de Dados" de
+5. Habilite o Firestore (_começar em modo de produção_) nas "Bases de Dados" de
    [Firebase console](https://console.firebase.google.com/).
 
-7. Instale o utilitário de linha de comando do Firebase:
-
-   ```sh
-   npm i -g firebase-tools
-   ```
-
-8. Adicione o ambiente de produção para fazer o deploy:
-
-   ```sh
-   firebase use --add
-   ```
-
-9. Instale dependências de cloud functions:
-
-   ```sh
-   # usando yarn
-   cd functions && yarn && cd ..
-   # alternativamente, usando npm
-   cd functions && npm install && cd ..
-   ```
-
-10. Rode o comando: `firebase deploy`
-
-11. Neste ponto, você pode começar com o _front-end_ :wink:
+6. Veja o video de configuração inicial para você poder começar com o _front-end_ :wink:. 
 
 ***
 
-Nota para a utilização do `create-react-app`:
-
-Se você tentar usar o `create-react-app` no diretório do projeto, você receberá
-um erro dizendo que há arquivos que podem apresentar um conflito. Para evitar
-esse problema você pode criar um novo aplicativo usando `create-react-app` e a
-partir daí _ junte com a pasta do projeto:
-
-```sh
-# se estava na pasta do projeto, fomos para a pasta acima
-cd ..
-
-create-react-app burger-queen-tmp
-cp -r burger-queen/* burger-queen-tmp/
-cp -r burger-queen-tmp/.gitignore burger-queen-tmp/* burger-queen/
-rm -rf burger-queen-tmp
-cd burger-queen
-```
-
-### Outros recursos
-
-#### Frameworks / bibliotecas
+### Frameworks / bibliotecas
 
 * [React](https://reactjs.org/)
-* [Vue](https://vuejs.org/)
-* [Angular](https://angular.io/)
+* [React beta - versão em construção usando Hooks ](https://beta.reactjs.org/)
+* [Create React App](https://create-react-app.dev/docs/getting-started)
+* [Configuração inicial (vídeo)](https://youtu.be/38iZjr-jH5E)
 
-#### Ferramentas
+### Ferramentas
 
 * [npm-scripts](https://docs.npmjs.com/misc/scripts)
 * [Babel](https://babeljs.io/)
 * [webpack](https://webpack.js.org/)
 
-#### PWA
+### Rotas
+
+* [React Router](https://reactrouter.com/web/guides/quick-start)
+
+### PWA
 
 * [Seu primeiro Progressive Web App - Google
   developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
@@ -605,15 +541,8 @@ cd burger-queen
 * [Como habilitar dados sem conexão - Firebase
   Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419)
 
-#### Serverless
+### Deploy
 
-* [Serverless Framework 1.0 - Pagar.me
-  Talks](https://www.youtube.com/watch?v=2oNovfw3V08)
-* [Firebase](https://firebase.google.com/)
-* [Serverless Architectures - Martin
-  Fowler](https://www.martinfowler.com/articles/serverless.html)
-
-#### Cloud functions
-
-* [Cloud functions - Firebase
-  Docs](https://firebase.google.com/docs/functions/?hl=es-419)
+* Veja a documentação [de deploy do Create React App](https://create-react-app.dev/docs/deployment).
+Você pode utilizar qualquer um dos serviços listados na documentação,
+sendo recomendado o Firebase, Vercel, Netlify, Github Pages ou Heroku.
