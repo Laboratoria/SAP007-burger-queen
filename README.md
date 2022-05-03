@@ -95,7 +95,7 @@ adicionar e a interface deve mostrar o _resumo do pedido_ com o custo total.
 ![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
 
 O objetivo principal é aprender a construir uma _interface web_ usando o
-_framework_ escolhido (React, Vue ou Angular). Esse framework front-end ataca
+_framework_ React. Esse framework front-end ataca
 o seguinte problema: **como manter a interface e estado sincronizados**.
 Portanto, esta experiência espera familiarizá-la com o conceito de _estado da
 tela_, e como cada mudança no estado vai refletir na interface (por exemplo,
@@ -339,7 +339,7 @@ Cumpra todas as histórias possíveis dentro do tempo especificado.
 A lógica do projeto deve ser totalmente implementada em JavaScript (ES6 +), HTML
 e CSS e empacotada de forma automatizada. 
 
-Neste projeto você deve usar [React](https://reactjs.org/).
+Neste projeto você deve usar [React](https://beta.reactjs.org/).
 
 O aplicativo deve ser um _Single Page App_. Os pedidos serão enviados por meio
 de um _tablet_, mas **não queremos um aplicativo nativo**, mas sim um aplicativo
